@@ -18,7 +18,13 @@ Do the following:
    HINT: no function required
 */
 
-
+const votingAge = 17; 
+  if (votingAge >= 18){
+    console.log ('True')
+  }
+  else{
+    console.log ('False!')
+  }
 
 /*
 Task 1b - Values
@@ -31,6 +37,8 @@ Do the following:
    HINT: no function required
 */
 
+let oneVar = 1;
+let twoVar = 2;
 
 
 
@@ -46,7 +54,8 @@ Do the following:
    HINT: look up the Number method
 */
 
-
+var numbers = 1999;
+dogYears.
 
 
 /*
@@ -58,10 +67,10 @@ Do the following:
    3. Multiply a and b and return the answer
 */
 
-function multiply(/*add your code here*/){
-    /*add your code here*/
+function multiply(a,b){
+    return a*b;
   }
-
+multiply(5,7)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 2 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -74,10 +83,10 @@ Do the following:
    3. Return the newly calculated age
 */
 
-function dogYears(/*add your code here*/){
-    /*add your code here*/
+function dogYears(age){
+    return age * 7;
 }
-
+dogYears(7);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 3 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -107,10 +116,33 @@ Use the hungryDog function and feeding requirements below to do the following:
   NOTE: If done correctly, a weight of 15 lbs and age of 1 year would return 0.44999999999999996
 */  
 
-function hungryDog(/*add your code here*/){
-    /*add your code here*/
+function hungryDog(weight, age){
+    /*adults*/
+    if (age >= 1){
+      if (weight <= 5){
+        return weight*.05;
+      }
+      if (weight >= 6 && weight <= 10){
+        return weight*.04;
+      }
+      if (weight >= 11 && weight <= 15){
+        return weight*.03;
+      }
+      if (weight >= 15){
+        return weight*.02;
+      }
+    }
+    if (age < 1 && age >= .58){
+      return weight*.04;
+    }
+    if (age <=.57 && age >= .33){
+      return weight*.05;
+    }
+    if (age <= .32 && age >= .16){
+      return weight*.10;
+    }
   }
-
+hungryDog(15,1)
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 4 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -129,10 +161,18 @@ Use the game function below to do the following:
   HINT: While you can complete this with only conditionals based on strings, it may help to equate choice to a number when using Math.random()
 */
 
-function game(/*add your code here*/){
-    /*add your code here*/
+function game(user){
+    if (user === Math.around(math.random()*2)){
+      return "it's a tie";
+    }
+    if (user <= Math.around(math.random()*2)){
+      return "you lose!";
+    }
+    if (user >= Math.around(math.random()*2)){
+      return "you win!";
+    }
 }
-  
+  game(1);
   
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 5 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -146,10 +186,10 @@ Using the miles function below do the following:
   3. Return the number of miles
 */
 
-function miles(/*add your code here*/){
-    /*add your code here*/
+function miles(kilo){
+    return kilo * .621371;
   }
-
+miles(10);
 
 
 //Task 5b - Feet to CM
@@ -160,10 +200,10 @@ Using the feet function below do the following:
   3. Return number of feet
 */
 
-function feet(/*add your code here*/){
-    /*add your code here*/
+function feet(cm){
+    return cm / 30.48;
   }
- 
+ feet(160);
 
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 6 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
@@ -176,10 +216,10 @@ Using the annoyingSong function below do the following:
       "(number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall"
 */
 
-function annoyingSong(/*add your code here*/){
-        /*add your code here*/
+function annoyingSong(num){
+        return `${num} bottles of soda on the wall, ${num} bottles of soda, take one down pass it around ${num - 1} bottles of soda on the wall`;
   }
-
+annoyingSong(5);
 
 /*🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀 Task 7 🚀🚀🚀🚀🚀🚀🚀🚀🚀🚀*/
 
@@ -196,10 +236,24 @@ Using the grade function below do the following:
    below 60 = F
 */
   
-function grade(/*add your code here*/){
-    /*add your code here*/
+function grade(score){
+    if (score >= 90){
+      return `you got an A`;
+    }
+    if (score >= 80){
+      return `you got a B`;
+    }
+    if (score >= 70){
+      return `you got a C`;
+    }
+    if (score >= 60){
+      return `you got a D`;
+    }
+    if (score <= 59){
+      return `you got an F`;
+    }
   }
-  
+  grade(85);
   
   
   
